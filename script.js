@@ -5,7 +5,7 @@ function playSound(soundFile) {
 	
 	let currentAudio = new Audio(`sounds/${soundFile}`);
 	currentAudio.play();
-	currAudio = currentAudio
+	currAudio = currentAudio;
 }
 
 function stopSound() {
