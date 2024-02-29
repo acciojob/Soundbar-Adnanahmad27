@@ -1,20 +1,19 @@
 //your JS code here. If required.
-/**/
 
 let currentAudio;
 
-function playSound(soundId) {
-  stopAudio(); // Stop any currently playing audio
-  
-  const audio = document.getElementById(soundId);
-  audio.play();
-  currentAudio = audio;
+function playSound(soundFile) {
+	stopSound(); // Stop any currently playing audio
+	
+	currentAudio = new Audio(`sounds/${soundFile}`);
+	currentAudio.play();
 }
 
 function stopSound() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-  }
+	if (currentAudio) {
+		currentAudio.pause();
+		currentAudio.currentTime = 0;
+		currentAudio = null;
+	}
 }
 
