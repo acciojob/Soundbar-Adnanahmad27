@@ -3,8 +3,9 @@ let currAudio=null;
 function playSound(soundFile) {
 	stopSound(); // Stop any currently playing audio
 	
-	currAudio = new Audio(`sounds/${soundFile}`);
-	currAudio.play();
+	let currentAudio = new Audio(`sounds/${soundFile}`);
+	currentAudio.play();
+	currAudio = currentAudio
 }
 
 function stopSound() {
