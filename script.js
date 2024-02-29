@@ -1,17 +1,17 @@
-let currentAudio=null;
+let currAudio=null;
 
 function playSound(soundFile) {
 	stopSound(); // Stop any currently playing audio
 	
-	currentAudio = new Audio(`sounds/${soundFile}`);
-	currentAudio.play();
+	currAudio = new Audio(`sounds/${soundFile}`);
+	currAudio.play();
 }
 
 function stopSound() {
-	if (currentAudio){
-		currentAudio.pause();
-		currentAudio.currentTime = 0;
-		currentAudio = null;
+	if (currAudio){
+		currAudio.pause();
+		currAudio.currentTime = 0;
+		currAudio = null;
 	}
 }
 
